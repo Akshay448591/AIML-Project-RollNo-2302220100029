@@ -89,6 +89,8 @@ Churn prediction is one of the highest-value classification use cases in subscri
 
 **Confusion Matrix:**
 
+![Confusion Matrix](https://github.com/Akshay448591/AIML-Project-RollNo-2302220100029/blob/main/Images/Confusion_matrix.png)
+
 **Performance Metrics:**
 | Metric | Value |
 |--------|-------|
@@ -174,10 +176,20 @@ Churn prediction is one of the highest-value classification use cases in subscri
 
 ## Screenshots
 
-![Correlation Heatmap](Images/correlation_heatmap.png)
-![Feature Importance](Images/feature_importance.png)
-![Churn by Contract](Images/churn_by_contract.png)
-![Confusion Matrix](Images/confusion_matrix.png)
+### Correlation Heatmap
+![Correlation Heatmap](https://github.com/Akshay448591/AIML-Project-RollNo-2302220100029/blob/main/Images/correlation%20heatmap.png)
+
+### Churn by Contract
+![Churn by Contract](https://github.com/Akshay448591/AIML-Project-RollNo-2302220100029/blob/main/Images/Churn%20rate%20vs%20contract%20type.png)
+
+### Churn Rate by Internet Service & Payment Method
+![Churn by Service](https://github.com/Akshay448591/AIML-Project-RollNo-2302220100029/blob/main/Images/%20churn%20rate%20by%20InternetService%20and%20PaymentMethod.png)
+
+### Tenure Distribution Split by Churn
+![Tenure Distribution](https://github.com/Akshay448591/AIML-Project-RollNo-2302220100029/blob/main/Images/%20tenure%20distribution%20split%20by%20churn.png)
+
+### Confusion Matrix
+![Confusion Matrix](https://github.com/Akshay448591/AIML-Project-RollNo-2302220100029/blob/main/Images/Confusion_matrix.png)
 
 ---
 
@@ -195,4 +207,4 @@ Churn prediction is one of the highest-value classification use cases in subscri
 ## Author
 
 **Akshay Yadav**  
-[GitHub](https://github.com/Akshay448591) | [LinkedIn](https://www.linkedin.com/authwall?trk=gf&trkInfo=AQEkzAOoknuezwAAAZ-ZXSgYpZcsG9rdh7d09LFVCQ5eyDaYo4_4SIVtuaG9tPWBL8LxcfOH-8ykA8VSeLdR_PWFOuEqIWPs-NjhDre2nGvg41rXO2FfT3SlLA0vVcLEaTe05k0=&original_referer=&sessionRedirect=https%3A%2F%2Fwww.linkedin.com%2Fin%2Fakshay-yadav-53211727a%3Futm_source%3Dshare_via%26utm_content%3Dprofile%26utm_medium%3Dmember_android)
+[GitHub](https://github.com/Akshay448591) | [LinkedIn](https://www.linkedin.com/in/akshay-yadav-53211727a)
