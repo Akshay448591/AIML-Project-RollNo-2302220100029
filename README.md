@@ -14,7 +14,7 @@ Churn prediction is one of the highest-value classification use cases in subscri
 
 ### Hosted on Render
 
-Live Link:https://aiml-project-rollno-2302220100029.onrender.com
+Live Link:https://aiml-project-rollno-2302220100029.streamlit.app
 ---
 
 ## Dataset
