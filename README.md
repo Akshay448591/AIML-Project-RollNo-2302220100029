@@ -193,12 +193,33 @@ Churn prediction is one of the highest-value classification use cases in subscri
 
 ---
 
+## Web Application (Streamlit Frontend & Backend)
+
+The project includes a web-based prediction dashboard built using Streamlit (Frontend) and Python (Backend) to test individual customer profiles against the trained model on the fly.
+
+### Running the App Locally
+
+1. **Navigate to the project folder**:
+   ```bash
+   cd "/Users/yogeshkumarsingh/Documents/Churn Prediction "
+   ```
+2. **Install dependencies**:
+   ```bash
+   pip install -r requirements.txt
+   ```
+3. **Start the Streamlit application**:
+   ```bash
+   streamlit run app.py
+   ```
+4. Open your browser to **http://localhost:8501** to access the UI dashboard.
+
+---
+
 ## Future Improvements
 
 - Test Random Forest, XGBoost, and Gradient Boosting models
 - Hyperparameter tuning using GridSearchCV
 - Add behavioral features (support tickets, login activity)
-- Deploy model as a web app using Flask/Streamlit
 - Implement A/B testing for retention campaigns
 - Use SMOTE to handle class imbalance
 
