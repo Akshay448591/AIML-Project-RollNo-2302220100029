@@ -204,7 +204,7 @@ The project includes a web-based prediction dashboard built using Streamlit (Fro
 
 1. **Navigate to the project folder**:
    ```bash
-   cd "/Users/yogeshkumarsingh/Documents/Churn Prediction "
+   cd "/Users/.../Churn Prediction "
    ```
 2. **Install dependencies**:
    ```bash
