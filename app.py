@@ -22,13 +22,11 @@ def load_assets():
     
     df['avg_monthly_spend'] = np.where(df['tenure'] == 0, 0, df['TotalCharges'] / df['tenure'])
     
-    df['tenure_group'] = pd.cut(df['tenure'], bins=[0, 12, 24, 48, 72, np.inf], 
-                                labels=['0-12 months', '13-24 months', '25-48 months', '49-72 months', '72+ months'])
+    df['tenure_group'] = pd.cut(df['tenure'], bins=[0, 12, 24, 48, np.inf], 
+                                labels=['0-12 months', '13-24 months', '25-48 months', '49+ months'])
     df['tenure_group'] = df['tenure_group'].astype(str)
     
-    df['Churn_Binary'] = df['Churn'].map({'Yes': 1, 'No': 0})
-    
-    df_clean = df.drop(columns=['customerID', 'Churn'])
+    df_clean = df.drop(columns=['customerID', 'Churn', 'Churn_Binary'], errors='ignore')
     X_train_encoded = pd.get_dummies(df_clean)
     
     scaler = StandardScaler()
@@ -97,14 +95,6 @@ if assets_loaded:
             monthly_charges = st.number_input("Monthly Charges ($)", min_value=0.0, max_value=200.0, value=70.0, step=0.5)
             total_charges = st.number_input("Total Charges ($)", min_value=0.0, max_value=10000.0, value=840.0, step=10.0)
 
-        st.write("---")
-
-        st.subheader("Model Validation Details")
-        col11, _ = st.columns([1, 3])
-        with col11:
-            churn_binary = st.selectbox("Current Churn Status", ["No", "Yes"])
-
-        st.write("")
         submit_button = st.form_submit_button("Predict Churn Risk")
 
     if submit_button:
@@ -127,21 +117,18 @@ if assets_loaded:
             'PaperlessBilling': paperless_billing,
             'PaymentMethod': payment_method,
             'MonthlyCharges': monthly_charges,
-            'TotalCharges': total_charges,
-            'Churn_Binary': 1 if churn_binary == "Yes" else 0
+            'TotalCharges': total_charges
         }
         
         input_data['avg_monthly_spend'] = 0.0 if tenure == 0 else total_charges / tenure
         
-        tenure_group_val = '72+ months'
+        tenure_group_val = '49+ months'
         if tenure <= 12:
             tenure_group_val = '0-12 months'
         elif tenure <= 24:
             tenure_group_val = '13-24 months'
         elif tenure <= 48:
             tenure_group_val = '25-48 months'
-        elif tenure <= 72:
-            tenure_group_val = '49-72 months'
             
         input_data['tenure_group'] = tenure_group_val
         
